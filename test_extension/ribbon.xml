@@ -1,0 +1,12 @@
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui">
+  <ribbon>
+    <tabs>
+      <tab id="customTab" label="My Add-In">
+        <group id="customGroup" label="Commands">
+          <button id="customButton" label="Click Me" size="large" onAction="onButtonClick" />
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>
+

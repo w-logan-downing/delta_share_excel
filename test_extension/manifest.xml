@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp
+  xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+  xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
+  xsi:type="TaskPaneApp">
+  <Id>YOUR_ADDIN_ID</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>YOUR_PROVIDER_NAME</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="Your Add-In Name" />
+  <Description DefaultValue="Description of your Add-In" />
+  <Hosts>
+    <Host Name="Workbook" />
+  </Hosts>
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://YOUR_ADDIN_URL/manifest.xml" />
+  </DefaultSettings>
+  <Permissions>ReadWriteDocument</Permissions>
+  <CustomUI xmlns="http://schemas.microsoft.com/office/2009/07/customui">
+    <ribbon startFromScratch="false">
+      <tabs>
+        <tab id="customTab" label="My Add-In" insertAfterMso="TabHome">
+          <group id="customGroup" label="Commands">
+            <button id="customButton" label="Click Me" size="large" onAction="onButtonClick" />
+          </group>
+        </tab>
+      </tabs>
+    </ribbon>
+  </CustomUI>
+</OfficeApp>
+
